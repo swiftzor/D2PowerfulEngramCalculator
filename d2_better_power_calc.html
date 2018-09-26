@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="d2_better_power_calc.js"></script>
+		
+		<script>
+			$(document).ready(function(){
+			console.log('loaded');
+				$("#calc").click(function() {
+					console.log('something');
+					doCalc(1000);
+					$("#result").show();
+				});
+			});
+		</script>
+		
+		<title>D2 Power Calculator</title>
+	</head>
+	<body>
+
+		Character equipment<br>
+		Primary: <input type="text" id="primary" value="500"><br>
+		Energy: <input type="text" id="energy" value="500"><br>
+		Heavy: <input type="text" id="heavy" value="500"><br>
+		Head: <input type="text" id="head" value="500"><br>
+		Arms: <input type="text" id="arms" value="500"><br>
+		Chest: <input type="text" id="chest" value="500"><br>
+		Boots: <input type="text" id="boots" value="500"><br>
+		Class Item: <input type="text" id="classItem" value="500"><br>
+		<button id="calc">Calculate</button><br><br><br>
+		<p id="result" hidden>
+			<strong>Calculation Results</strong><br>
+			Based on 1000 simulations<br>
+			25th percentile: <strong><span id="val25"></span></strong><br>
+			50th percentile: <strong id="val50"></strong><br>
+			75th percentile: <strong id="val75"></strong><br>
+		</p>
+	</body>
+</html>
