@@ -69,9 +69,9 @@ function doCalc(runs)
 		avgPost[j] = avgLight;
 	}
 	avgPost.sort();
-	var per25 = avgPost[avgPost.length * .25], 
-		per50 = avgPost[avgPost.length * .5], 
-		per75 = avgPost[avgPost.length * .75];
+	var per25 = avgPost[Math.floor(avgPost.length * .25)], 
+		per50 = avgPost[Math.floor(avgPost.length * .5)], 
+		per75 = avgPost[Math.floor(avgPost.length * .75)];
 		
 	//console.log(avgPost);
 	//console.log(avgPost.length);

@@ -8,9 +8,10 @@
 			$(document).ready(function(){
 			console.log('loaded');
 				$("#calc").click(function() {
-					console.log('something');
-					doCalc(1000);
+					console.log($('#runs').val());
+					doCalc($('#runs').val());
 					$("#result").show();
+					$("#ran").text($('#runs').val());
 				});
 			});
 		</script>
@@ -28,10 +29,17 @@
 		Chest: <input type="text" id="chest" value="500"><br>
 		Boots: <input type="text" id="boots" value="500"><br>
 		Class Item: <input type="text" id="classItem" value="500"><br>
+		Number of runs to do: 
+		<select id="runs">
+			<option value=1>1</option>
+			<option value=10>10</option>
+			<option value=100>100</option>
+			<option value=1000>10000</option>
+		</select></br>
 		<button id="calc">Calculate</button><br><br><br>
 		<p id="result" hidden>
 			<strong>Calculation Results</strong><br>
-			Based on 1000 simulations<br>
+			Based on <span id="ran"></span> simulations<br>
 			25th percentile: <strong><span id="val25"></span></strong><br>
 			50th percentile: <strong id="val50"></strong><br>
 			75th percentile: <strong id="val75"></strong><br>
