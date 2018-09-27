@@ -90,6 +90,15 @@ var calculator = {
 		console.log(avgLight);
 		console.log(startAvgLight);
 		
+		$("#primaryEnd").val(light[0]);
+		$("#energyEnd").val(light[1]);
+		$("#heavyEnd").val(light[2]);
+		$("#headEnd").val(light[3]);
+		$("#armsEnd").val(light[4]);
+		$("#chestEnd").val(light[5]);
+		$("#bootsEnd").val(light[6]);
+		$("#classItemEnd").val(light[7]);
+		
 		$("#val25").text(per25);
 		$("#val50").text(per50);
 		$("#val75").text(per75);
