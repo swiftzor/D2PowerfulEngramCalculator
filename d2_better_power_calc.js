@@ -1,6 +1,8 @@
 var calculator = {
-	doCalc : function(runs) 
-	{
+	attributes : {
+		capEngrams: [15, 3, 1, 6, 4]
+	},
+	doCalc : function(runs) {
 		var startLight = [
 					parseInt($("#primary").val()),
 					parseInt($("#energy").val()),
@@ -20,7 +22,7 @@ var calculator = {
 			var light = this.copyArray(startLight);
 			var	avgLight = startAvgLight;
 			var clan = 1;
-			var capEngrams = [15, 3, 1, 7, 4];
+			var capEngrams = this.copyArray(this.attributes.capEngrams);
 			var collected = [0, 0, 0, 0, 0];
 			
 			var totalCollected = 0;
@@ -103,22 +105,18 @@ var calculator = {
 		$("#val50").text(per50);
 		$("#val75").text(per75);
 	}, 
-	random : function(range, lowPad) 
-	{
+	random : function(range, lowPad) {
 		return val = Math.floor(Math.random() * range) + lowPad;
 	},
-	getSum : function(total, current)
-	{
+	getSum : function(total, current) {
 		return total + current;
 	},
-	dropGear : function(avgLight, equiped, range, lowPad)
-	{
+	dropGear : function(avgLight, equiped, range, lowPad) {
 		var newItem = this.random(range, lowPad) + avgLight;
 		//console.log('old: ' + equiped + ' new: ' + newItem);
 		return Math.floor((newItem > equiped) ? newItem : equiped);
 	},
-	copyArray : function(fromArr) 
-	{
+	copyArray : function(fromArr) {
 		var retVal = [];
 		for(i = 0; i < fromArr.length; i++)
 		{
