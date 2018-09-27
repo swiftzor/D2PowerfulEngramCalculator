@@ -1,8 +1,25 @@
 var calculator = {
 	attributes : {
-		capEngrams: [15, 3, 1, 6, 4]
+		capEngrams: [15, 3, 1, 6, 4],
+		runs: 1
 	},
-	doCalc : function(runs) {
+	registerEvents: function() 
+	{
+		var that = this;
+		$("#calc").click(function() {
+			that.execCalc();
+		});
+	},
+	execCalc: function(me)
+	{
+		console.log(this.runs);
+		this.runs = $("#runs").val();
+		this.doCalc();
+		console.log('test exec');
+		$("#result").show();
+		$("#ran").text(this.runs);
+	},
+	doCalc : function() {
 		var startLight = [
 					parseInt($("#primary").val()),
 					parseInt($("#energy").val()),
@@ -17,7 +34,7 @@ var calculator = {
 		console.log(startLight);
 		console.log(startAvgLight);
 		var avgPost = [];
-		for(j = 0; j < runs; j++) 
+		for(j = 0; j < this.runs; j++) 
 		{
 			var light = this.copyArray(startLight);
 			var	avgLight = startAvgLight;

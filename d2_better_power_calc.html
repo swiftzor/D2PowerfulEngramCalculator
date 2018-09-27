@@ -10,15 +10,9 @@
 		
 		<script>
 			$(document).ready(function(){
-			console.log('loaded');
-			$("#result").hide();
-				$("#calc").click(function() {
-					console.log($('#runs').val());
-					calculator.doCalc($('#runs').val());
-					//doCalc($('#runs').val());
-					$("#result").show();
-					$("#ran").text($('#runs').val());
-				});
+				console.log('loaded');
+				calculator.registerEvents();
+				$("#result").hide();
 			});
 		</script>
 		
@@ -81,53 +75,53 @@
 							<div class="card-body">
 								<h5 class="card-title">520 Power Engrams</h5>
 								<div class="btn-group-toggle" data-toggle="buttons" style="margin-top: 5px; margin-bottom: 5px;">
-									<label class="btn btn-info">
+									<label class="btn btn-outline-info">
 										<input type="checkbox">Daily Strike
 									</label>
-									<label class="btn btn-info">
+									<label class="btn btn-outline-info">
 										<input type="checkbox">Daily Crucible
 									</label>
-									<label class="btn btn-info">
+									<label class="btn btn-outline-info">
 										<input type="checkbox">Daily Gambit
 									</label>
-									<label class="btn btn-info">
+									<label class="btn btn-outline-info">
 										<input type="checkbox">Daily Adventure
 									</label>
-									<label class="btn btn-info">
+									<label class="btn btn-outline-info">
 										<input type="checkbox">Crucible Weekly
 									</label>
-									<label class="btn btn-info">
+									<label class="btn btn-outline-info">
 										<input type="checkbox">Gambit Weekly
 									</label>
 								</div>
 								<div class="btn-group-toggle" data-toggle="buttons" style="margin-top: 5px; margin-bottom: 5px;">
-									<label class="btn btn-info">
+									<label class="btn btn-outline-info">
 										<input type="checkbox">Strikes Weekly
 									</label>
-									<label class="btn btn-info">
+									<label class="btn btn-outline-info">
 										<input type="checkbox">Heroic Stories
 									</label>
-									<label class="btn btn-info">
+									<label class="btn btn-outline-info">
 										<input type="checkbox">Flashpoint
 									</label>
-									<label class="btn btn-info">
+									<label class="btn btn-outline-info">
 										<input type="checkbox">Ikora
 									</label>
-									<label class="btn btn-info">
+									<label class="btn btn-outline-info">
 										<input type="checkbox">Spider Bounty
 									</label>
-									<label class="btn btn-info">
+									<label class="btn btn-outline-info">
 										<input type="checkbox">Clan Engram: Nightfall
 									</label>
 								</div>
 								<div class="btn-group-toggle" data-toggle="buttons" style="margin-top: 5px; margin-bottom: 5px;">
-									<label class="btn btn-info">
+									<label class="btn btn-outline-info">
 										<input type="checkbox">Clan Engram: Crucible
 									</label>
-									<label class="btn btn-info">
+									<label class="btn btn-outline-info">
 										<input type="checkbox">Clan Engram: Gambit
 									</label>
-									<label class="btn btn-info">
+									<label class="btn btn-outline-info">
 										<input type="checkbox">Clan Engram: Raid
 									</label>
 								</div>
@@ -137,13 +131,13 @@
 							<div class="card-body">
 								<h5 class="card-title">540 Power Engrams</h5>
 								<div class="btn-group-toggle" data-toggle="buttons">
-									<label class="btn btn-info">
+									<label class="btn btn-outline-info">
 										<input type="checkbox">Nightfall
 									</label>
-									<label class="btn btn-info">
+									<label class="btn btn-outline-info">
 										<input type="checkbox">Nightfall Score
 									</label>
-									<label class="btn btn-info">
+									<label class="btn btn-outline-info">
 										<input type="checkbox">Petra: Weekly Story
 									</label>
 								</div>
@@ -153,7 +147,7 @@
 							<div class="card-body">
 								<h5 class="card-title">560 Power Engrams</h5>
 								<div class="btn-group-toggle" data-toggle="buttons">
-									<label class="btn btn-info">
+									<label class="btn btn-outline-info">
 										<input type="checkbox">Petra: 8 Dreaming City Bounties
 									</label>
 								</div>
@@ -163,22 +157,22 @@
 							<div class="card-body">
 								<h5 class="card-title">580 Power Engrams</h5>
 								<div class="btn-group-toggle" data-toggle="buttons">
-									<label class="btn btn-info">
+									<label class="btn btn-outline-info">
 										<input type="checkbox">Kalli
 									</label>
-									<label class="btn btn-info">
+									<label class="btn btn-outline-info">
 										<input type="checkbox">Shuro-Chi
 									</label>
-									<label class="btn btn-info">
+									<label class="btn btn-outline-info">
 										<input type="checkbox">Morgeth
 									</label>
-									<label class="btn btn-info">
+									<label class="btn btn-outline-info">
 										<input type="checkbox">Blind Well T4
 									</label>
-									<label class="btn btn-info">
+									<label class="btn btn-outline-info">
 										<input type="checkbox">Petra: Weekly Challenge
 									</label>
-									<label class="btn btn-info">
+									<label class="btn btn-outline-info">
 										<input type="checkbox">Ascendant Challenge
 									</label>
 								</div>
@@ -188,16 +182,16 @@
 							<div class="card-body">
 								<h5 class="card-title">600 Power Engrams</h5>
 								<div class="btn-group-toggle" data-toggle="buttons">
-									<label class="btn btn-info">
+									<label class="btn btn-outline-info">
 										<input type="checkbox">Gambit Weekly Bounty
 									</label>
-									<label class="btn btn-info">
+									<label class="btn btn-outline-info">
 										<input type="checkbox">Vault
 									</label>
-									<label class="btn btn-info">
+									<label class="btn btn-outline-info">
 										<input type="checkbox">Riven
 									</label>
-									<label class="btn btn-info">
+									<label class="btn btn-outline-info">
 										<input type="checkbox">Heart
 									</label>
 								</div>
