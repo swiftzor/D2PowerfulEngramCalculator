@@ -28,45 +28,65 @@
 		<div class="containter-fluid">
 			<div class="row">
 				<div class="offset-sm-1 col-sm-2">
-					Character equipment<br>
-					Primary: <input type="text" id="primary" value="500"><br>
-					Energy: <input type="text" id="energy" value="500"><br>
-					Heavy: <input type="text" id="heavy" value="500"><br>
-					Head: <input type="text" id="head" value="500"><br>
-					Arms: <input type="text" id="arms" value="500"><br>
-					Chest: <input type="text" id="chest" value="500"><br>
-					Boots: <input type="text" id="boots" value="500"><br>
-					Class Item: <input type="text" id="classItem" value="500"><br>
-					Number of runs to do: 
-					<select id="runs">
-						<option value=1>1</option>
-						<option value=10>10</option>
-						<option value=100>100</option>
-						<option value=1000>1000</option>
-					</select><br>
-					<button id="calc">Calculate</button><br><br><br>
+					<div class="form-group">
+						<label>Character equipment</label><br>
+						<label for="primary">Primary:</label>
+						<input type="text" id="primary" class="form-control" value="500">
+						<label for="energy">Energy:</label>
+						<input type="text" id="energy" class="form-control" value="500">
+						<label for="heavy">Heavy:</label>
+						<input type="text" id="heavy" class="form-control" value="500">
+						<label for="head">Head:</label>
+						<input type="text" id="head" class="form-control" value="500">
+						<label for="arms">Arms:</label>
+						<input type="text" id="arms" class="form-control" value="500">
+						<label for="chest">Chest:</label>
+						<input type="text" id="chest" class="form-control" value="500">
+						<label for="boots">Boots:</label>
+						<input type="text" id="boots" class="form-control" value="500">
+						<label for="classItem">Class Item:</label>
+						<input type="text" id="classItem" class="form-control" value="500">
+						<label for="runs">Number of runs to do:</label> 
+						<select id="runs" class="form-control">
+							<option value=1>1</option>
+							<option value=10>10</option>
+							<option value=100>100</option>
+							<option value=1000>1000</option>
+						</select><br>
+						<button id="calc" class="btn btn-secondary">Calculate</button><br><br><br>
+					</div>
 				</div>
 				<div class="col-sm-2">
-					Character Equipment on last run<br>
-					Primary: <input type="text" id="primaryEnd" value="500"><br>
-					Energy: <input type="text" id="energyEnd" value="500"><br>
-					Heavy: <input type="text" id="heavyEnd" value="500"><br>
-					Head: <input type="text" id="headEnd" value="500"><br>
-					Arms: <input type="text" id="armsEnd" value="500"><br>
-					Chest: <input type="text" id="chestEnd" value="500"><br>
-					Boots: <input type="text" id="bootsEnd" value="500"><br>
-					Class Item: <input type="text" id="classItemEnd" value="500"><br>
+					<label>Character Equipment on last run</label><br>
+					<label for="primaryEnd">Primary:</label>
+					<input type="text" id="primaryEnd" class="form-control" value="500">
+					<label for="energyEnd">Energy:</label>
+					<input type="text" id="energyEnd" class="form-control" value="500">
+					<label for="heavyEnd">Heavy:</label>
+					<input type="text" id="heavyEnd" class="form-control" value="500">
+					<label for="headEnd">Head:</label>
+					<input type="text" id="headEnd" class="form-control" value="500">
+					<label for="armsEnd">Arms:</label>
+					<input type="text" id="armsEnd" class="form-control" value="500">
+					<label for="chestEnd">Chest:</label>
+					<input type="text" id="chestEnd" class="form-control" value="500">
+					<label for="bootsEnd">Boots:</label>
+					<input type="text" id="bootsEnd" class="form-control" value="500">
+					<label for="classItemEnd">Class Item:</label>
+					<input type="text" id="classItemEnd" class="form-control" value="500">
+				</div>
+				<div class="col-sm-6">
 				</div>
 			</div>
 			<div class="row">
-				<div class="offset-sm-2 col-sm-2">
-					<p id="result">
-						<strong>Calculation Results</strong><br>
-						Based on <span id="ran"></span> simulations<br>
-						25th percentile: <strong><span id="val25"></span></strong><br>
-						50th percentile: <strong id="val50"></strong><br>
-						75th percentile: <strong id="val75"></strong><br>
-					</p>
+				<div class="offset-sm-1 col-sm-10">
+					<div id="result" class="alert alert-secondary" >
+							<h5>Calculation Results</h5>
+							Based on <span id="ran"></span> simulations<br>
+							25th percentile: <strong><span id="val25"></span></strong> 
+							50th percentile: <strong id="val50"></strong> 
+							75th percentile: <strong id="val75"></strong>
+					</div>
 				</div>
 			</div>
 		</div>
