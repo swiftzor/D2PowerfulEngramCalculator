@@ -1,6 +1,6 @@
 var calculator = {
 	attributes : {
-		capEngrams: [15, 3, 1, 6, 4],
+		capEngrams: [28, 10, 3, 1],
 		runs: 1
 	},
 	registerEvents: function() 
@@ -12,10 +12,8 @@ var calculator = {
 	},
 	execCalc: function(me)
 	{
-		console.log(this.runs);
-		this.runs = $("#runs").val();
+		this.attributes.runs = $("#runs").val();
 		this.doCalc();
-		console.log('test exec');
 		$("#result").show();
 		$("#ran").text(this.runs);
 	},
@@ -28,62 +26,65 @@ var calculator = {
 					parseInt($("#arms").val()),
 					parseInt($("#chest").val()),
 					parseInt($("#boots").val()),
-					parseInt($("#classItem").val()),
+					parseInt($("#classItem").val())
 						];
-		var startAvgLight = startLight.reduce(this.getSum) / 8 ;
+		var artifactBonus = parseInt($("#artifact").val());
+		console.log("artifact bonus: "  + artifactBonus);
+		var startAvgLight = (startLight.reduce(this.getSum) / 8) + artifactBonus ;
 		console.log(startLight);
 		console.log(startAvgLight);
 		var avgPost = [];
-		for(j = 0; j < this.runs; j++) 
+		for(j = 0; j < this.attributes.runs; j++) 
 		{
 			var light = this.copyArray(startLight);
 			var	avgLight = startAvgLight;
 			var clan = 1;
 			var capEngrams = this.copyArray(this.attributes.capEngrams);
-			var collected = [0, 0, 0, 0, 0];
+			var collected = [0, 0, 0, 0];
 			
 			var totalCollected = 0;
 			var totalLeft = capEngrams.reduce(this.getSum);
 			
-			avgLight = startAvgLight;
+			//avgLight = startAvgLight;
 			
 			while (totalCollected < totalLeft)
 			{
 				var piece = this.random(8, 0);
-				if(avgLight < 520 && collected[0] < capEngrams[0])
+				if(collected[0] < capEngrams[0])
 				{
-					light[piece] = this.dropGear(avgLight, light[piece], 8, 2);
+					var gear = this.dropGear(avgLight, light[piece], -3, 0, 950);
+					console.log(gear)
+					light[piece] = gear;
+					collected[0]++;
 				}
-				else if(avgLight < 540 && collected[1] < capEngrams[1])
+				if(collected[1] < capEngrams[1])
 				{
-					light[piece] = this.dropGear(avgLight, light[piece], 8, 2);
+					var gear = this.dropGear(avgLight, light[piece], 0, 3, 950);
+					console.log(gear)
+					light[piece] = gear;
+					collected[1]++;
 				}
-				else if(avgLight < 560 && collected[2] < capEngrams[2])
+				if(collected[2] < capEngrams[2])
 				{
-					light[piece] = this.dropGear(avgLight, light[piece], 8, 2);
+					var gear = this.dropGear(avgLight, light[piece], 0, 4, 950);
+					console.log(gear)
+					light[piece] = gear;
+					collected[2]++;
 				}
-				else if(avgLight < 580 && collected[3] < capEngrams[3])
+				if(collected[3] < capEngrams[3])
 				{
-					light[piece] = this.dropGear(avgLight, light[piece], 8, 2);
-				}
-				else if(avgLight < 600 && collected[4] < capEngrams[4])
-				{
-					light[piece] = this.dropGear(avgLight, light[piece], 8, 2);
-				}
-				else
-				{
-					light[piece] = this.dropGear(avgLight, light[piece], 2, 0);
+					var gear = this.dropGear(avgLight, light[piece], 0, 5, 960);
+					console.log(gear)
+					light[piece] = gear;
+					collected[3]++;
 				}
 			
-				avgLight = light.reduce(this.getSum) / 8;
-				totalCollected++;
-				console.log('piece: ' + piece + ' average light: ' + avgLight);
-				console.log(light);
+			 	avgLight = (light.reduce(this.getSum) / 8) + artifactBonus;
+			 	totalCollected++;
+			 	console.log('piece: ' + piece + ' average light: ' + avgLight);
+			 	console.log(light);
 			}
 			
-			//clan engram
-			var piece = this.random(8, 0);
-			light[piece] = this.dropGear(avgLight, light[piece], 0, 3);
 			
 			console.log(avgLight);
 			avgPost[j] = avgLight;
@@ -128,8 +129,9 @@ var calculator = {
 	getSum : function(total, current) {
 		return total + current;
 	},
-	dropGear : function(avgLight, equiped, range, lowPad) {
+	dropGear : function(avgLight, equiped, range, lowPad, maxLight) {
 		var newItem = this.random(range, lowPad) + avgLight;
+		newItem = (newItem > maxLight) ? maxLight : newItem;
 		//console.log('old: ' + equiped + ' new: ' + newItem);
 		return Math.floor((newItem > equiped) ? newItem : equiped);
 	},

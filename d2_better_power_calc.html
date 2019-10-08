@@ -25,21 +25,23 @@
 					<div class="form-group">
 						<label>Character equipment</label><br>
 						<label for="primary">Primary:</label>
-						<input type="text" id="primary" class="form-control" value="500">
+						<input type="text" id="primary" class="form-control" value="900">
 						<label for="energy">Energy:</label>
-						<input type="text" id="energy" class="form-control" value="500">
+						<input type="text" id="energy" class="form-control" value="900">
 						<label for="heavy">Heavy:</label>
-						<input type="text" id="heavy" class="form-control" value="500">
+						<input type="text" id="heavy" class="form-control" value="900">
 						<label for="head">Head:</label>
-						<input type="text" id="head" class="form-control" value="500">
+						<input type="text" id="head" class="form-control" value="900">
 						<label for="arms">Arms:</label>
-						<input type="text" id="arms" class="form-control" value="500">
+						<input type="text" id="arms" class="form-control" value="900">
 						<label for="chest">Chest:</label>
-						<input type="text" id="chest" class="form-control" value="500">
+						<input type="text" id="chest" class="form-control" value="900">
 						<label for="boots">Boots:</label>
-						<input type="text" id="boots" class="form-control" value="500">
+						<input type="text" id="boots" class="form-control" value="900">
 						<label for="classItem">Class Item:</label>
-						<input type="text" id="classItem" class="form-control" value="500">
+						<input type="text" id="classItem" class="form-control" value="900">
+						<label for="artifact">Seasonal Artifact Bonus:</label>
+						<input type="text" id="artifact" class="form-control" value="0">
 						<label for="runs">Number of runs to do:</label> 
 						<select id="runs" class="form-control">
 							<option value=1>1</option>
@@ -53,146 +55,174 @@
 				<div class="col-sm-2">
 					<label>Character Equipment on last run</label><br>
 					<label for="primaryEnd">Primary:</label>
-					<input type="text" id="primaryEnd" class="form-control" value="500">
+					<input type="text" id="primaryEnd" class="form-control" value="900">
 					<label for="energyEnd">Energy:</label>
-					<input type="text" id="energyEnd" class="form-control" value="500">
+					<input type="text" id="energyEnd" class="form-control" value="900">
 					<label for="heavyEnd">Heavy:</label>
-					<input type="text" id="heavyEnd" class="form-control" value="500">
+					<input type="text" id="heavyEnd" class="form-control" value="900">
 					<label for="headEnd">Head:</label>
-					<input type="text" id="headEnd" class="form-control" value="500">
+					<input type="text" id="headEnd" class="form-control" value="900">
 					<label for="armsEnd">Arms:</label>
-					<input type="text" id="armsEnd" class="form-control" value="500">
+					<input type="text" id="armsEnd" class="form-control" value="900">
 					<label for="chestEnd">Chest:</label>
-					<input type="text" id="chestEnd" class="form-control" value="500">
+					<input type="text" id="chestEnd" class="form-control" value="900">
 					<label for="bootsEnd">Boots:</label>
-					<input type="text" id="bootsEnd" class="form-control" value="500">
+					<input type="text" id="bootsEnd" class="form-control" value="900">
 					<label for="classItemEnd">Class Item:</label>
-					<input type="text" id="classItemEnd" class="form-control" value="500">
+					<input type="text" id="classItemEnd" class="form-control" value="900">
 				</div>
 				<div class="col-sm-6">
 					<div class="row">
 						<div class="card" style="width: 90%; margin-left: 5%; margin-top: 5px; margin-bottom: 5px;">
 							<div class="card-body">
-								<h5 class="card-title">520 Power Engrams</h5>
+								<h5 class="card-title">Legacy (Power -3 to 0)</h5>
 								<div class="btn-group-toggle" data-toggle="buttons" style="margin-top: 5px; margin-bottom: 5px;">
 									<label class="btn btn-outline-info">
-										<input type="checkbox">Daily Strike
+										<input type="checkbox">Clan Nightfall
 									</label>
 									<label class="btn btn-outline-info">
-										<input type="checkbox">Daily Crucible
+										<input type="checkbox">Clan Gabmit
 									</label>
 									<label class="btn btn-outline-info">
-										<input type="checkbox">Daily Gambit
+										<input type="checkbox">Clan Raid
 									</label>
 									<label class="btn btn-outline-info">
-										<input type="checkbox">Daily Adventure
+										<input type="checkbox">Clan Crucible
 									</label>
 									<label class="btn btn-outline-info">
-										<input type="checkbox">Crucible Weekly
+										<input type="checkbox">Leviathan Baths
 									</label>
 									<label class="btn btn-outline-info">
-										<input type="checkbox">Gambit Weekly
+										<input type="checkbox">Leviathan Garden
+									</label>
+									<label class="btn btn-outline-info">
+										<input type="checkbox">Leviathan Gauntlet
+									</label>
+									<label class="btn btn-outline-info">
+										<input type="checkbox">Leviathan Calus
+									</label>
+									<label class="btn btn-outline-info">
+										<input type="checkbox">EoW Post Pools Encounter
+									</label>
+									<label class="btn btn-outline-info">
+										<input type="checkbox">EoW Bonus Chest
+									</label>
+									<label class="btn btn-outline-info">
+										<input type="checkbox">EoW Awaken Argos
+									</label>
+									<label class="btn btn-outline-info">
+										<input type="checkbox">EoW Argos
+									</label>
+									<label class="btn btn-outline-info">
+										<input type="checkbox">SoS Statue Garden 
+									</label>
+									<label class="btn btn-outline-info">
+										<input type="checkbox">SoS Power Conduit
+									</label>
+									<label class="btn btn-outline-info">
+										<input type="checkbox">SoS Red Legion Assault
+									</label>
+									<label class="btn btn-outline-info">
+										<input type="checkbox">SoS Val Ca'our
+									</label>
+									<label class="btn btn-outline-info">
+										<input type="checkbox">LW Kalli
+									</label>
+									<label class="btn btn-outline-info">
+										<input type="checkbox">LW Shuro-Chi
+									</label>
+									<label class="btn btn-outline-info">
+										<input type="checkbox">LW Morgeth
+									</label>
+									<label class="btn btn-outline-info">
+										<input type="checkbox">LW Vault
+									</label>
+									<label class="btn btn-outline-info">
+										<input type="checkbox">LW Riven's Heart
+									</label>
+									<label class="btn btn-outline-info">
+										<input type="checkbox">SotP Berserkers
+									</label>
+									<label class="btn btn-outline-info">
+										<input type="checkbox">SotP Botza Ruins
+									</label>
+									<label class="btn btn-outline-info">
+										<input type="checkbox">SotP Insurrection Prime
+									</label>
+									<label class="btn btn-outline-info">
+										<input type="checkbox">CoS Hive Ritual
+									</label>
+									<label class="btn btn-outline-info">
+										<input type="checkbox">CoS Bridge
+									</label>
+									<label class="btn btn-outline-info">
+										<input type="checkbox">CoS Gahlran's Deception
+									</label>
+									<label class="btn btn-outline-info">
+										<input type="checkbox">CoS Gahlran
 									</label>
 								</div>
-								<div class="btn-group-toggle" data-toggle="buttons" style="margin-top: 5px; margin-bottom: 5px;">
-									<label class="btn btn-outline-info">
-										<input type="checkbox">Strikes Weekly
-									</label>
-									<label class="btn btn-outline-info">
-										<input type="checkbox">Heroic Stories
-									</label>
+							</div>
+						</div>
+						<div class="card" style="width: 90%; margin-left: 5%; margin-top: 5px; margin-bottom: 5px;">
+							<div class="card-body">
+								<h5 class="card-title">Tier 1 (Power +3)</h5>
+								<div class="btn-group-toggle" data-toggle="buttons">
 									<label class="btn btn-outline-info">
 										<input type="checkbox">Flashpoint
 									</label>
 									<label class="btn btn-outline-info">
-										<input type="checkbox">Ikora
+										<input type="checkbox">Gunsmith Bounties
 									</label>
 									<label class="btn btn-outline-info">
-										<input type="checkbox">Spider Bounty
+										<input type="checkbox">Eris Story Mission
 									</label>
 									<label class="btn btn-outline-info">
-										<input type="checkbox">Clan Engram: Nightfall
-									</label>
-								</div>
-								<div class="btn-group-toggle" data-toggle="buttons" style="margin-top: 5px; margin-bottom: 5px;">
-									<label class="btn btn-outline-info">
-										<input type="checkbox">Clan Engram: Crucible
+										<input type="checkbox">Eris Hunts
 									</label>
 									<label class="btn btn-outline-info">
-										<input type="checkbox">Clan Engram: Gambit
+										<input type="checkbox">Vanguard Bounties
 									</label>
 									<label class="btn btn-outline-info">
-										<input type="checkbox">Clan Engram: Raid
-									</label>
-								</div>
-							</div>
-						</div>
-						<div class="card" style="width: 90%; margin-left: 5%; margin-top: 5px; margin-bottom: 5px;">
-							<div class="card-body">
-								<h5 class="card-title">540 Power Engrams</h5>
-								<div class="btn-group-toggle" data-toggle="buttons">
-									<label class="btn btn-outline-info">
-										<input type="checkbox">Nightfall
+										<input type="checkbox">Vanguard Strikes
 									</label>
 									<label class="btn btn-outline-info">
-										<input type="checkbox">Nightfall Score
+										<input type="checkbox">Crucible Bounties
 									</label>
 									<label class="btn btn-outline-info">
-										<input type="checkbox">Petra: Weekly Story
+										<input type="checkbox">Crucible Core Matches
+									</label>
+									<label class="btn btn-outline-info">
+										<input type="checkbox">Crucible Rotator Matches
+									</label>
+									<label class="btn btn-outline-info">
+										<input type="checkbox">Gambit Bounties
 									</label>
 								</div>
 							</div>
 						</div>
 						<div class="card" style="width: 90%; margin-left: 5%; margin-top: 5px; margin-bottom: 5px;">
 							<div class="card-body">
-								<h5 class="card-title">560 Power Engrams</h5>
+								<h5 class="card-title">Tier 2 (Power + 4)</h5>
 								<div class="btn-group-toggle" data-toggle="buttons">
 									<label class="btn btn-outline-info">
-										<input type="checkbox">Petra: 8 Dreaming City Bounties
+										<input type="checkbox">Gambit Matches
+									</label>
+									<label class="btn btn-outline-info">
+										<input type="checkbox">Vex Offensive
+									</label>
+									<label class="btn btn-outline-info">
+										<input type="checkbox">Clan XP
 									</label>
 								</div>
 							</div>
 						</div>
 						<div class="card" style="width: 90%; margin-left: 5%; margin-top: 5px; margin-bottom: 5px;">
 							<div class="card-body">
-								<h5 class="card-title">580 Power Engrams</h5>
+								<h5 class="card-title">Pinacle (Power + 5)</h5>
 								<div class="btn-group-toggle" data-toggle="buttons">
 									<label class="btn btn-outline-info">
-										<input type="checkbox">Kalli
-									</label>
-									<label class="btn btn-outline-info">
-										<input type="checkbox">Shuro-Chi
-									</label>
-									<label class="btn btn-outline-info">
-										<input type="checkbox">Morgeth
-									</label>
-									<label class="btn btn-outline-info">
-										<input type="checkbox">Blind Well T4
-									</label>
-									<label class="btn btn-outline-info">
-										<input type="checkbox">Petra: Weekly Challenge
-									</label>
-									<label class="btn btn-outline-info">
-										<input type="checkbox">Ascendant Challenge
-									</label>
-								</div>
-							</div>
-						</div>
-						<div class="card" style="width: 90%; margin-left: 5%; margin-top: 5px; margin-bottom: 5px;">
-							<div class="card-body">
-								<h5 class="card-title">600 Power Engrams</h5>
-								<div class="btn-group-toggle" data-toggle="buttons">
-									<label class="btn btn-outline-info">
-										<input type="checkbox">Gambit Weekly Bounty
-									</label>
-									<label class="btn btn-outline-info">
-										<input type="checkbox">Vault
-									</label>
-									<label class="btn btn-outline-info">
-										<input type="checkbox">Riven
-									</label>
-									<label class="btn btn-outline-info">
-										<input type="checkbox">Heart
+										<input type="checkbox">Nightfall: The Ordeal
 									</label>
 								</div>
 							</div>
