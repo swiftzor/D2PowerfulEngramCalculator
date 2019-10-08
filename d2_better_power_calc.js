@@ -9,6 +9,9 @@ var calculator = {
 		$("#calc").click(function() {
 			that.execCalc();
 		});
+		$(".currentGear").change(function() {
+			that.updateDisplayPower();
+		});
 	},
 	execCalc: function(me)
 	{
@@ -89,6 +92,7 @@ var calculator = {
 			per50 = avgPost[Math.floor(avgPost.length * .5)], 
 			per75 = avgPost[Math.floor(avgPost.length * .75)];
 		
+		$("#avgPowerLast").text((light.reduce(this.getSum) / 8) + artifactBonus);
 		$("#primaryEnd").val(light[0]);
 		$("#energyEnd").val(light[1]);
 		$("#heavyEnd").val(light[2]);
@@ -121,5 +125,22 @@ var calculator = {
 		}
 		
 		return retVal;
+	},
+	updateDisplayPower: function() {
+		var avgPower = $("#avgPower");
+		var light = [
+			parseInt($("#primary").val()),
+			parseInt($("#energy").val()),
+			parseInt($("#heavy").val()),
+			parseInt($("#head").val()),
+			parseInt($("#arms").val()),
+			parseInt($("#chest").val()),
+			parseInt($("#boots").val()),
+			parseInt($("#classItem").val())
+				];
+		var artifactBonus = parseInt($("#artifact").val());
+		var power = (light.reduce(this.getSum) / 8) + artifactBonus;
+
+		avgPower.text(power);
 	}
 }

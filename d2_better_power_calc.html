@@ -24,22 +24,23 @@
 				<div class="offset-sm-1 col-sm-2">
 					<div class="form-group">
 						<label>Character equipment</label><br>
+						<label>Average Power: <span id="avgPower">900</span></label><br>
 						<label for="primary">Primary:</label>
-						<input type="text" id="primary" class="form-control" value="900">
+						<input type="text" id="primary" class="form-control currentGear" value="900">
 						<label for="energy">Energy:</label>
-						<input type="text" id="energy" class="form-control" value="900">
+						<input type="text" id="energy" class="form-control currentGear" value="900">
 						<label for="heavy">Heavy:</label>
-						<input type="text" id="heavy" class="form-control" value="900">
+						<input type="text" id="heavy" class="form-control currentGear" value="900">
 						<label for="head">Head:</label>
-						<input type="text" id="head" class="form-control" value="900">
+						<input type="text" id="head" class="form-control currentGear" value="900">
 						<label for="arms">Arms:</label>
-						<input type="text" id="arms" class="form-control" value="900">
+						<input type="text" id="arms" class="form-control currentGear" value="900">
 						<label for="chest">Chest:</label>
-						<input type="text" id="chest" class="form-control" value="900">
+						<input type="text" id="chest" class="form-control currentGear" value="900">
 						<label for="boots">Boots:</label>
-						<input type="text" id="boots" class="form-control" value="900">
+						<input type="text" id="boots" class="form-control currentGear" value="900">
 						<label for="classItem">Class Item:</label>
-						<input type="text" id="classItem" class="form-control" value="900">
+						<input type="text" id="classItem" class="form-control currentGear" value="900">
 						<label for="artifact">Seasonal Artifact Bonus:</label>
 						<input type="text" id="artifact" class="form-control" value="0">
 						<label for="runs">Number of runs to do:</label> 
@@ -54,6 +55,7 @@
 				</div>
 				<div class="col-sm-2">
 					<label>Character Equipment on last run</label><br>
+					<label>Average Power: <span id="avgPowerLast">900</span></label><br>
 					<label for="primaryEnd">Primary:</label>
 					<input type="text" id="primaryEnd" class="form-control" value="900">
 					<label for="energyEnd">Energy:</label>
@@ -169,34 +171,34 @@
 								<h5 class="card-title">Tier 1 (Power +3)</h5>
 								<div class="btn-group-toggle" data-toggle="buttons">
 									<label class="btn btn-outline-info">
-										<input class="teir1Cb" type="checkbox">Flashpoint
+										<input class="tier1Cb" type="checkbox">Flashpoint
 									</label>
 									<label class="btn btn-outline-info">
-										<input class="teir1Cb" type="checkbox">Gunsmith Bounties
+										<input class="tier1Cb" type="checkbox">Gunsmith Bounties
 									</label>
 									<label class="btn btn-outline-info">
-										<input class="teir1Cb" type="checkbox">Eris Story Mission
+										<input class="tier1Cb" type="checkbox">Eris Story Mission
 									</label>
 									<label class="btn btn-outline-info">
-										<input class="teir1Cb" type="checkbox">Eris Hunts
+										<input class="tier1Cb" type="checkbox">Eris Hunts
 									</label>
 									<label class="btn btn-outline-info">
-										<input class="teir1Cb" type="checkbox">Vanguard Bounties
+										<input class="tier1Cb" type="checkbox">Vanguard Bounties
 									</label>
 									<label class="btn btn-outline-info">
-										<input class="teir1Cb" type="checkbox">Vanguard Strikes
+										<input class="tier1Cb" type="checkbox">Vanguard Strikes
 									</label>
 									<label class="btn btn-outline-info">
-										<input class="teir1Cb" type="checkbox">Crucible Bounties
+										<input class="tier1Cb" type="checkbox">Crucible Bounties
 									</label>
 									<label class="btn btn-outline-info">
-										<input class="teir1Cb" type="checkbox">Crucible Core Matches
+										<input class="tier1Cb" type="checkbox">Crucible Core Matches
 									</label>
 									<label class="btn btn-outline-info">
-										<input class="teir1Cb" type="checkbox">Crucible Rotator Matches
+										<input class="tier1Cb" type="checkbox">Crucible Rotator Matches
 									</label>
 									<label class="btn btn-outline-info">
-										<input class="teir1Cb" type="checkbox">Gambit Bounties
+										<input class="tier1Cb" type="checkbox">Gambit Bounties
 									</label>
 								</div>
 							</div>
@@ -206,13 +208,13 @@
 								<h5 class="card-title">Tier 2 (Power + 4)</h5>
 								<div class="btn-group-toggle" data-toggle="buttons">
 									<label class="btn btn-outline-info">
-										<input class="teir2Cb" type="checkbox">Gambit Matches
+										<input class="tier2Cb" type="checkbox">Gambit Matches
 									</label>
 									<label class="btn btn-outline-info">
-										<input class="teir2Cb" type="checkbox">Vex Offensive
+										<input class="tier2Cb" type="checkbox">Vex Offensive
 									</label>
 									<label class="btn btn-outline-info">
-										<input class="teir2Cb" type="checkbox">Clan XP
+										<input class="tier2Cb" type="checkbox">Clan XP
 									</label>
 								</div>
 							</div>
